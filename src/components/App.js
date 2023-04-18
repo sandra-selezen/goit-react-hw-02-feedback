@@ -11,18 +11,10 @@ export class App extends Component {
   }
 
   onLeaveFeedback = (event) => {
-    const targetBtn = event.target.name;
-    // console.log(targetBtn);
-    const stateArray = Object.keys(this.state);
-    // console.log(stateArray);
-    for (const element of stateArray) {
-      if (element === targetBtn) {
-        console.log(element);
-        this.setState(prevState => {
-          return { element: prevState.element + 1 };
-        })
-      }
-    }
+    const value = event.target.name;
+    this.setState(prevState => ({
+      [value]: prevState[value] + 1,
+    }))
   }
   
   render() {
