@@ -5,9 +5,9 @@ import { Statistics } from './Statistics/Statistics';
 
 export class App extends Component {
   state = {
-    good: 5,
-    neutral: 6,
-    bad: 1
+    good: 0,
+    neutral: 0,
+    bad: 0
   }
 
   onLeaveFeedback = (event) => {
